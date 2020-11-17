@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <title>Etusivu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Tervetuloa</h1>
+            <h2>Tällä sivulla voit tarkastella ja muokata omia tietojasi.</h2>
+        </div>
+        
+        <section>
+            
+            <div class="flex_container wrapper">
+                
+                <div class="flex_item">
+                    <h2>Henkilötiedot</h2>
+                    <form>
+                        <label for="nimi">Nimi</label><br>
+                        <input type="text" id="nimi" name="nimi" value="Erkki Ernest Esimerkki" readonly><br>
+                        <label for="puh">Puh.</label><br>
+                        <input type="text" id="puh" name="puh" value="045 1234 567"><br>
+                        <label for="email">Sähköposti</label><br>
+                        <input type="text" id="email" name="email" value="erkki.esimerkki@gmail.com"><br>
+                        <label for="osoite">Katuosoite</label><br>
+                        <input type="text" id="osoite" name="osoite" value="Kukkakuja 3"><br>
+                        <label for="postnum">Postinumero</label><br>
+                        <input type="text" id="postnum" name="postnum" value="00100"><br>
+                        <label for="postitmp">Postitoimipaikka</label><br>
+                        <input type="text" id="postitmp" name="postitmp" value="Helsinki"><br>
+                        <input type="submit" value="Tallenna muutokset">
+                    </form>
+                </div>
+                
+                <div class="flex_item">
+                    <h2>Työsuhteen teidot</h2>
+                    <form>
+                        <label for="alkupvm">Työsuhteen alkamispäivä</label><br>
+                        <input type="text" id="alkupvm" name="alkupvm" value="01/11/2009" readonly><br>
+                        <label for="tyosuhde">Työsuhde</label><br>
+                        <input type="text" id="tyosuhde" name="tyosuhde" value="Vakituinen" readonly><br>
+                        <label for="nimike">Nimike</label><br>
+                        <input type="text" id="nimike" name="nimike" value="Sairaanhoitaja" readonly><br>
+                        <label for="osasto">Osasto</label><br>
+                        <input type="text" id="osasto" name="osasto" value="xxxx" readonly><br>
+                        <label for="esimies">Esimies</label><br>
+                        <input type="text" id="esimies" name="esimies" value="Paula Pomo" readonly><br>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </section>
+    </body>
+</html>
