@@ -37,6 +37,25 @@
     font-size: 20px;
 }
 
+.logout{
+    background-color: gray;
+    color: white;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.headerh1 {
+    margin 0;
+    display: inline-block;
+}
+
+.logout {
+    float: right;
+}
+
 .wrapper {
     margin: auto;
     max-width: 75rem;
@@ -61,6 +80,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    color: #575757;
 }
 
 .muokkaus {
@@ -83,5 +103,85 @@
     margin: 10px 0;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.del {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgb(255, 104, 104);
+    color: white;
+    padding: 14px 20px;
+    margin: 39px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*Tietojen poistopopup*/
+.delpopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.vahvistapopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.delpopup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 100px 20px;
+    border: 1px solid #888;
+    max-width: 30rem;
+    font-size: 30px;
+    text-align: center;
+}
+
+.close {
+    width: 50%;
+    max-width: 500px;
+    background-color: gray;
+    color: white;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.vahvista {
+    width: 50%;
+    max-width: 500px;
+    background-color: rgb(255, 104, 104);
+    color: white;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }

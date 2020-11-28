@@ -8,7 +8,8 @@
     </head>
     <body>
         <div class="header">
-            <h1>Tervetuloa!</h1>
+            <button onclick="location.href = 'login.html';" id="logout" class="logout">Kirjaudu ulos</button> <br>
+            <h1 class="headerh1">Tervetuloa!</h1>
             <h2>Tällä sivulla voit tarkastella ja muokata omia tietojasi.</h2>
         </div>
         
@@ -32,6 +33,7 @@
                         <input class="muokkaus" type="text" id="postnum" name="postnum" value="00100"><br>
                         <label for="postitmp">Postitoimipaikka</label><br>
                         <input class="muokkaus" type="text" id="postitmp" name="postitmp" value="Helsinki"><br>
+                    
                         <button class="submit" id="submit">Tallenna muutokset</button>
                 </div>
                 
@@ -47,6 +49,28 @@
                         <input class="luku" type="text" id="osasto" name="osasto" value="xxxx" readonly><br>
                         <label for="esimies">Esimies</label><br>
                         <input class="luku" type="text" id="esimies" name="esimies" value="Paula Pomo" readonly><br>
+                    
+                        <button id="delbtn" class="del">Lähetä tietojen poistopyyntö</button>
+                    <!--Popup jossa pyydetään varmistus tietojen poistopyynnön lähettämiseen-->
+                    <div id="delpopup" class="delpopup">
+
+                      <div class="delpopup-content">
+                          <p>Olet lähettämässä tietojen poistopyynnön, vahvista toimenpide.</p>
+                          <button id="peruuta" class="close">Peruuta</button> <br>
+                          <button id="vahvista" class="vahvista">Vahvista</button>
+                      </div>
+
+                    </div>
+                    <!--Annetaan käyttäjälle vahvistus poistopyynnön lähettämisestä-->
+                    <div id="vahvistapopup" class="vahvistapopup">
+
+                      <div class="delpopup-content">
+                          <p>Tietojen poistopyyntö lähetetty.</p>
+                          <button id="sulje" class="close">Sulje</button>
+                      </div>
+
+                    </div>
+                    
                 </div>
                 
             </div>
@@ -70,6 +94,30 @@
                 document.getElementById("postnum").innerText = postnum;
                 document.getElementById("postitmp").innerText = postitmp;
                 
+            }
+            /*Tietojen poistppyyntö popup*/
+            var delpopup = document.getElementById("delpopup");
+            var btn = document.getElementById("delbtn");
+            var peruuta = document.getElementById("peruuta");
+            var vahvista = document.getElementById("vahvista");
+            var vahvistapopup = document.getElementById("vahvistapopup");
+            var sulje = document.getElementById("sulje");
+
+            btn.onclick = function() {
+                delpopup.style.display = "inline-block";
+            }
+
+            peruuta.onclick = function() {
+                delpopup.style.display = "none";
+            }
+            
+            vahvista.onclick = function() {
+                delpopup.style.display = "none";
+                vahvistapopup.style.display = "inline-block";
+            }
+            
+            sulje.onclick = function() {
+                vahvistapopup.style.display = "none";
             }
             
         </script>
