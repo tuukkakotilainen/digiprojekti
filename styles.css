@@ -1,11 +1,43 @@
-/*Login*/
-.login {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/*Header*/
+.header {
+    overflow: hidden;
+    background-color: #414042;
+    padding: 20px 10px;
+}
+
+.logo {
+    float: left;
+}
+
+.header-right {
+    float: right;
+}
+
+.logout {
+    background-color: #ED1C24;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
     text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/*Login*/
+
+.login {
+    text-align: center; 
+    background-color: #DCF4EF;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 50px;
 }
 
 .kirjaudu {
@@ -14,51 +46,39 @@
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
 .painike {
-    width: 300px;
-    background-color: #2e6d9b;
-    color: white;
-    padding: 14px 20px;
-    margin: 10px 0;
+    background-color: #414042;
     border: none;
-    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 50px;
     cursor: pointer;
+    border-radius: 20px;
+    width: 200px;
+    outline: none;
 }
 
 /*Etusivu*/
-.header {
-    padding: 10px;
-    text-align: center;
-    background: lightgray;
-    font-size: 20px;
-}
 
-.logout{
-    background-color: gray;
-    color: white;
-    padding: 14px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.headerh1 {
-    margin 0;
-    display: inline-block;
-}
-
-.logout {
-    float: right;
+.tausta {
+    background-color: #DCF4EF;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
 }
 
 .wrapper {
     margin: auto;
     max-width: 75rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
     
 }
 
@@ -68,57 +88,64 @@
 
 .flex_item {
     flex:1; 
-    padding: 30px;
+    margin-left: 110px;
 }
 
 .luku {
-    width: 80%;
+    width: 70%;
     max-width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
-    color: #575757;
+    background-color: #f2f2f2;
 }
 
 .muokkaus {
-    width: 80%;
+    width: 70%;
     max-width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 3px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
 .submit {
-    width: 80%;
-    max-width: 500px;
-    background-color: #2e6d9b;
-    color: white;
-    padding: 14px 20px;
-    margin: 10px 0;
+    background-color: #414042;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 10px 50px;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .del {
-    width: 80%;
-    max-width: 500px;
-    background-color: rgb(255, 104, 104);
-    color: white;
-    padding: 14px 20px;
-    margin: 39px 0;
+    background-color: #ED1C24;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 10px 30px;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 /*Tietojen poistopopup*/
+
 .delpopup {
     display: none;
     position: fixed;
@@ -146,37 +173,46 @@
 }
 
 .delpopup-content {
-    background-color: #fefefe;
+    background-color: #DCF4EF;
     margin: 15% auto;
     padding: 100px 20px;
     border: 1px solid #888;
+    border-radius: 20px;
     max-width: 30rem;
     font-size: 30px;
     text-align: center;
 }
 
 .close {
-    width: 50%;
-    max-width: 500px;
-    background-color: gray;
-    color: white;
-    padding: 14px;
-    margin: 10px 0;
+    background-color: #414042;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .vahvista {
-    width: 50%;
-    max-width: 500px;
-    background-color: rgb(255, 104, 104);
-    color: white;
-    padding: 14px;
-    margin: 10px 0;
+    background-color: #ED1C24;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .close:hover,
