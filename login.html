@@ -6,16 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
-    <body class="login">
-        <h1>Kirjaudu sisään</h1>
-        <form name="login">
-        <div>
-            <input class="kirjaudu"type="text" placeholder="käyttäjätunnus" name="userid"><br>
-            <input class="kirjaudu" type="password" placeholder="salasana" name="password"><br>
-            <input class ="painike" type="button" onClick="check(this.form)" value="Kirjaudu"/><br>
-            <input class ="painike" type="button" onClick="kortti()" value="Lue kortti">
+    <body>
+        <div class="header">
+            <img src="csit.png" alt="logo" class="logo">
+            <div class="header-right">
+            </div>
         </div>
-        </form>
+        <div class="login">
+            <img src="csitbig.png" alt="logo">
+            <h1>Kirjaudu sisään</h1>
+            <form name="login">
+            <div>
+                <input class="kirjaudu"type="text" placeholder="käyttäjätunnus" name="userid"><br>
+                <input class="kirjaudu" type="password" placeholder="salasana" name="password"><br>
+                <input class ="painike" type="button" onClick="check(this.form)" value="Kirjaudu"/><br>
+                <input class ="painike" type="button" onClick="kortti()" value="Lue kortti">
+            </div>
+            </form>
+        </div>
         
         <script>
             /*Käyttäjätunnuksen ja salasanan tarkistus*/
