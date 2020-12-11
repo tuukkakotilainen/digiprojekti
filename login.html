@@ -7,39 +7,98 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <!--Header-->
         <div class="header">
             <img src="csit.png" alt="logo" class="logo">
             <div class="header-right">
+                <a class="viiva">|</a>
+                <button class="kieli">SWE</button>
+                <a class="viiva">|</a>
+                <button class="kieli">ENG</button>
+                <div class="dropdown">
+                    <button class="dropbtn">INFO <i class="arrow"></i></button>
+                    <div class="dropdown-content">
+                        <a id="avaatuki">Ota yhteys tukeen</a>
+                        <a>Hae tunnukset</a>
+                        <a>Käyttöoikeudet</a>
+                        <a>Käyttöohjeet</a>
+                    </div>
+                </div>
             </div>
         </div>
+        
+        <!--Ota yhtey tukeen -popup-->
+        <div id="tuki" class="tuki">
+            <div class="popup-content">
+                <h2>Ota yhteys tukeen.</h2>
+                <p>Puhelin: 123 4567 890</p>
+                <p>Sähköposti: tuki@palvelu.fi</p>
+                <button id="suljetuki" class="close">Sulje</button>
+            </div>
+        </div>
+        
+        <!--login-->
         <div class="login">
             <img src="csitbig.png" alt="logo">
             <h1>Kirjaudu sisään</h1>
+            <p id="loginerror" class="loginerror">Käyttäjätunnus tai salasana on väärin.</p>
+            
             <form name="login">
-            <div>
-                <input class="kirjaudu"type="text" placeholder="käyttäjätunnus" name="userid"><br>
-                <input class="kirjaudu" type="password" placeholder="salasana" name="password"><br>
-                <input class ="painike" type="button" onClick="check(this.form)" value="Kirjaudu"/><br>
-                <input class ="painike" type="button" onClick="kortti()" value="Lue kortti">
-            </div>
+                <div>
+                    <input class="kirjaudu"type="text" placeholder="käyttäjätunnus" name="userid"><br>
+                    <input class="kirjaudu" type="password" placeholder="salasana" name="password"><br>
+                    <input class ="painike" type="button" onClick="check(this.form)" value="Kirjaudu"/><br>
+                    <input class ="painike" type="button" onClick="kortti()" value="Lue kortti">
+                </div>
             </form>
+            <p class="unohditko">Unohditko salasanasi?</p>
+            
+            <div id="kortinluku" class="kortinluku">
+                <div class="popup-content">
+                    <p>Syötä kortti lukijaan kirjautuaksesi.</p> <br>
+                    <button id="peruuta" class="close">Peruuta</button>
+                </div>
+            </div>
         </div>
         
         <script>
+            /*Tukipopup*/
+            var tuki = document.getElementById("tuki");
+            var suljetuki = document.getElementById("suljetuki");
+            var avaatuki = document.getElementById("avaatuki");
+            
+            avaatuki.onclick = function() {
+                tuki.style.display = "inline-block";
+            }
+            
+            suljetuki.onclick = function() {
+                tuki.style.display = "none";
+            }
+            
             /*Käyttäjätunnuksen ja salasanan tarkistus*/
+            var loginerror = document.getElementById("loginerror");
+            
             function check(form) {
                 if(form.userid.value == "123" && form.password.value == "123")
                     {
                         location.href = "etusivu.html";
                     }
             else {
-                alert("Käyttäjätunnus tai salasana on väärin")
+                loginerror.style.display = "inline-block"
                 }
             }
-            /*Kortin luku alert*/
+            /*Kortinluku popup*/
+            var kortinluku = document.getElementById("kortinluku");
+            var peruuta = document.getElementById("peruuta");
+            
             function kortti() {
-                alert("Syötä kortti lukijaan kirjautuaksesi.")
+                kortinluku.style.display = "inline-block"
             }
+            
+            peruuta.onclick = function() {
+                kortinluku.style.display = "none"
+            }
+            
         </script>
     </body>
 </html>

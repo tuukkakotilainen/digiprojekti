@@ -8,13 +8,38 @@
     </head>
     <body>
         
+        <!--Header-->
         <div class="header">
             <img src="csit.png" alt="logo" class="logo">
             <div class="header-right">
+                <a class="viiva">|</a>
+                <button class="kieli">SWE</button>
+                <a class="viiva">|</a>
+                <button class="kieli">ENG</button>
+                <div class="dropdown">
+                    <button class="dropbtn">INFO <i class="arrow"></i></button>
+                    <div class="dropdown-content">
+                        <a id="avaatuki">Ota yhteys tukeen</a>
+                        <a>Hae tunnukset</a>
+                        <a>Käyttöoikeudet</a>
+                        <a>Käyttöohjeet</a>
+                    </div>
+                </div>
                 <a href="login.html" class="logout">Kirjaudu ulos</a>
             </div>
         </div>
         
+        <!--Ota yhteys tukeen -popup-->
+        <div id="tuki" class="tuki">
+            <div class="popup-content">
+                <h2>Ota yhteys tukeen.</h2>
+                <p>Puhelin: 123 4567 890</p>
+                <p>Sähköposti: tuki@palvelu.fi</p>
+                <button id="suljetuki" class="close">Sulje</button>
+            </div>
+        </div>
+        
+        <!--Sivun sisältö-->
         <div class="tausta">
         <section>
             
@@ -53,25 +78,59 @@
                         <label for="esimies">Esimies</label><br>
                         <input class="luku" type="text" id="esimies" name="esimies" value="Paula Pomo" readonly><br>
                     
-                        <button id="delbtn" class="del">Lähetä tietojen poistopyyntö</button>
+                        <h2>Tietosuoja</h2>
+                    
+                        <a id="delbtn" class="tietosuoja">- Lähetä tietojen poistopyyntö</a> <br><br>
+                        <a class="tietosuoja">- Pyydä omat tiedot</a> <br><br>
+                        <a class="tietosuoja">- Pyydä tietojen oikaisua</a> <br><br>
+                        <a class="tietosuoja">- Vaihda salasana</a>
+                    
                     <!--Popup jossa pyydetään varmistus tietojen poistopyynnön lähettämiseen-->
                     <div id="delpopup" class="delpopup">
-
-                      <div class="delpopup-content">
+                      <div class="popup-content">
                           <p>Olet lähettämässä tietojen poistopyynnön, vahvista toimenpide.</p>
+                          <a id="poistolisatieto" class="lisatieto">Lisätietoja tietojen poistopyynnöstä</a><br><br>
                           <button id="peruuta" class="close">Peruuta</button> <br>
                           <button id="vahvista" class="vahvista">Vahvista</button>
                       </div>
+                    </div>
+                    
+                    <!--Lisätietoja poistopyynnöstä -popup-->
+                    <div id="poistolisatietopopup" class="poistolisatietopopup">
+                        <div class="popup-content">
+                            <p>Rekisterinpitäjän täytyy poistaa henkilötietosi näissä tapauksissa:<br><br>
 
+                            - Rekisterinpitäjä ei enää tarvitse tietojasi alkuperäiseen tarkoitukseen.<br>
+                            - Peruutat antamasi suostumuksen, eikä tietojesi käsittelylle ole muuta 
+                               laillista perustetta.<br>
+                            - Vastustat tietojesi käsittelyä, eikä käsittelylle ole perusteltua syytä.<br>
+                            - Vastustat tietojesi käsittelyä suoramarkkinointiin.<br>
+                            - Tietojasi on käsitelty lainvastaisesti.<br>
+                            - Tietosi on poistettava lainsäädännön perusteella.<br>
+                            - Tietosi on kerätty huoltajasi suostumuksen perusteella 
+                              tietoyhteiskunnan palvelujen tarjoamisen yhteydessä.<br>
+                            - Tietoyhteiskunnan palveluita ovat esimerkiksi verkkokaupat ja 
+                              sosiaalinen media.<br><br>
+
+                            Rekisterinpitäjän ei kuitenkaan ole pakko poistaa henkilötietojasi, jos 
+                              ne ovat perustellusti tarpeellisia seuraavia tarkoituksia varten:<br><br>
+
+                            - sananvapaus ja tiedon välittäminen<br>
+                            - lain noudattaminen<br>
+                            - rekisterinpitäjälle kuuluvan julkisen vallan käyttäminen<br>
+                            - yleinen etu – esimerkiksi arkistointi, tutkimus tai tilastointi<br>
+                            - oikeusvaateen laatiminen, esittäminen tai puolustaminen.<br><br>
+
+                            Tietojen poistaminen on maksutonta. Jos poistopyyntö on perusteeton tai kohtuuton, rekisterinpitäjä voi periä kohtuullisen maksun tai kieltäytyä toteuttamasta pyyntöä.</p>
+                            <button id="suljepoistoinfo" class="close">Sulje</button>
+                        </div>
                     </div>
                     <!--Annetaan käyttäjälle vahvistus poistopyynnön lähettämisestä-->
                     <div id="vahvistapopup" class="vahvistapopup">
-
-                      <div class="delpopup-content">
+                      <div class="popup-content">
                           <p>Tietojen poistopyyntö lähetetty.</p>
                           <button id="sulje" class="close">Sulje</button>
                       </div>
-
                     </div>
                     
                 </div>
@@ -82,6 +141,19 @@
         </div>
         
         <script>
+            /*Tukipopup*/
+            var tuki = document.getElementById("tuki");
+            var suljetuki = document.getElementById("suljetuki");
+            var avaatuki = document.getElementById("avaatuki");
+            
+            avaatuki.onclick = function() {
+                tuki.style.display = "inline-block";
+            }
+            
+            suljetuki.onclick = function() {
+                tuki.style.display = "none";
+            }
+            
             /*Tietojen "tallentaminen"*/
             var submit = document.getElementById("submit");
             
@@ -99,13 +171,16 @@
                 document.getElementById("postitmp").innerText = postitmp;
                 
             }
-            /*Tietojen poistppyyntö popup*/
+            /*Tietojen poistppyyntöön liittyvät popupit*/
             var delpopup = document.getElementById("delpopup");
             var btn = document.getElementById("delbtn");
             var peruuta = document.getElementById("peruuta");
             var vahvista = document.getElementById("vahvista");
             var vahvistapopup = document.getElementById("vahvistapopup");
             var sulje = document.getElementById("sulje");
+            var poistolisatieto = document.getElementById("poistolisatieto");
+            var poistolisatietopopup = document.getElementById("poistolisatietopopup");
+            var suljepoistoinfo = document.getElementById("suljepoistoinfo");
 
             btn.onclick = function() {
                 delpopup.style.display = "inline-block";
@@ -122,6 +197,16 @@
             
             sulje.onclick = function() {
                 vahvistapopup.style.display = "none";
+            }
+            
+            poistolisatieto.onclick = function() {
+                delpopup.style.display = "none";
+                poistolisatietopopup.style.display = "inline-block";
+            }
+            
+            suljepoistoinfo.onclick = function() {
+                poistolisatietopopup.style.display = "none";
+                delpopup.style.display = "inline-block";
             }
             
         </script>
