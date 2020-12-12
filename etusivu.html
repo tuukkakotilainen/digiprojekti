@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
     </head>
     <body>
         
@@ -32,7 +33,7 @@
         <!--Ota yhteys tukeen -popup-->
         <div id="tuki" class="tuki">
             <div class="popup-content">
-                <h2>Ota yhteys tukeen.</h2>
+                <h3>Ota yhteys tukeen</h3>
                 <p>Puhelin: 123 4567 890</p>
                 <p>Sähköposti: tuki@palvelu.fi</p>
                 <button id="suljetuki" class="close">Sulje</button>
@@ -45,14 +46,21 @@
             
             <div class="flex_container wrapper">
                 
+                <!--Henkilötiedot-->
                 <div class="flex_item">
                     <h2>Henkilötiedot</h2>
-                        <label for="nimi">Etunimi</label><br>
+                        <label for="kayttajanimi">Käyttäjänimi</label><br>
+                        <input class="luku" type="text" id="kayttajanimi" name="kayttajanimi" value="123" readonly><br>
+                        <label for="nimi">Etunimet</label><br>
                         <input class="luku" type="text" id="etunimi" name="etunimi" value="Erkki Ernest" readonly><br>
-                     <label for="nimi">Sukunimi</label><br>
+                        <label for="nimi">Sukunimi</label><br>
                         <input class="luku" type="text" id="sukunimi" name="sukunimi" value="Esimerkki" readonly><br>
+                        <label for="henkilotunnut">Henkilötunnus</label><br>
+                        <input class="luku" type="text" id="henkilotunnut" name="henkilotunnut" value="111111-111X" readonly><br>
+                        <label for="kutsumanimi">Kutsumanimi</label><br>
+                        <input class="muokkaus" type="text" id="kutsumanimi" name="kutsumanimi" value="Badding"><br>
                         <label for="puh">Puh.</label><br>
-                        <input class="muokkaus" class="modify" type="text" id="puh" name="puh" value="045 1234 567"><br>
+                        <input class="muokkaus" type="text" id="puh" name="puh" value="045 1234 567"><br>
                         <label for="email">Sähköposti</label><br>
                         <input class="muokkaus" type="text" id="email" name="email" value="erkki.esimerkki@gmail.com"><br>
                         <label for="osoite">Katuosoite</label><br>
@@ -61,37 +69,52 @@
                         <input class="muokkaus" type="text" id="postnum" name="postnum" value="00100"><br>
                         <label for="postitmp">Postitoimipaikka</label><br>
                         <input class="muokkaus" type="text" id="postitmp" name="postitmp" value="Helsinki"><br>
+                        <label for="kieli">Kieli</label><br>
+                        <input class="muokkaus" type="text" id="kieli" name="kieli" value="Suomi"><br>
                     
                         <button class="submit" id="submit">Tallenna muutokset</button>
                 </div>
                 
+                <!--Työsuhteen tiedot-->
                 <div class="flex_item">
                     <h2>Työsuhteen teidot</h2>
+                        <label for="henkilokuntanumero">Henkilökuntanumero</label><br>
+                        <input class="luku" type="text" id="henkilokuntanumero" name="henkilokuntanumero" value="123456789" readonly><br>
+                        <label for="nimike">Ammattinimike</label><br>
+                        <input class="luku" type="text" id="nimike" name="nimike" value="Lääkäri" readonly><br>
+                        <label for="Tyonkuvaus">Työnkuvaus</label><br>
+                        <input class="luku" type="text" id="tyonkuvaus" name="tyonkuvaus" value="Kirurgi" readonly><br>
+                        <label for="osasto">Osasto</label><br>
+                        <input class="luku" type="text" id="osasto" name="osasto" value="15B" readonly><br>
                         <label for="alkupvm">Työsuhteen alkamispäivä</label><br>
                         <input class="luku" type="text" id="alkupvm" name="alkupvm" value="01/11/2009" readonly><br>
                         <label for="tyosuhde">Työsuhde</label><br>
                         <input class="luku" type="text" id="tyosuhde" name="tyosuhde" value="Vakituinen" readonly><br>
-                        <label for="nimike">Nimike</label><br>
-                        <input class="luku" type="text" id="nimike" name="nimike" value="Sairaanhoitaja" readonly><br>
-                        <label for="osasto">Osasto</label><br>
-                        <input class="luku" type="text" id="osasto" name="osasto" value="xxxx" readonly><br>
                         <label for="esimies">Esimies</label><br>
                         <input class="luku" type="text" id="esimies" name="esimies" value="Paula Pomo" readonly><br>
                     
                         <h2>Tietosuoja</h2>
                     
                         <a id="delbtn" class="tietosuoja">- Lähetä tietojen poistopyyntö</a> <br><br>
-                        <a class="tietosuoja">- Pyydä omat tiedot</a> <br><br>
-                        <a class="tietosuoja">- Pyydä tietojen oikaisua</a> <br><br>
+                        <a id="avaapyydatiedot" class="tietosuoja">- Pyydä omat tiedot</a> <br><br>
+                        <a id="avaaoikaisu" class="tietosuoja">- Pyydä tietojen oikaisua</a> <br><br>
                         <a class="tietosuoja">- Vaihda salasana</a>
                     
                     <!--Popup jossa pyydetään varmistus tietojen poistopyynnön lähettämiseen-->
                     <div id="delpopup" class="delpopup">
                       <div class="popup-content">
-                          <p>Olet lähettämässä tietojen poistopyynnön, vahvista toimenpide.</p>
+                          <h3>Olet lähettämässä tietojen poistopyynnön, vahvista toimenpide</h3>
                           <a id="poistolisatieto" class="lisatieto">Lisätietoja tietojen poistopyynnöstä</a><br><br>
-                          <button id="peruuta" class="close">Peruuta</button> <br>
-                          <button id="vahvista" class="vahvista">Vahvista</button>
+                          <button id="vahvista" class="close">Vahvista</button><br>
+                          <button id="peruuta" class="close">Peruuta</button> 
+                      </div>
+                    </div>
+                    
+                    <!--Annetaan käyttäjälle vahvistus poistopyynnön lähettämisestä-->
+                    <div id="vahvistapopup" class="vahvistapopup">
+                      <div class="popup-content">
+                          <p>Tietojen poistopyyntö lähetetty</p>
+                          <button id="sulje" class="close">Sulje</button>
                       </div>
                     </div>
                     
@@ -125,12 +148,90 @@
                             <button id="suljepoistoinfo" class="close">Sulje</button>
                         </div>
                     </div>
-                    <!--Annetaan käyttäjälle vahvistus poistopyynnön lähettämisestä-->
-                    <div id="vahvistapopup" class="vahvistapopup">
+                    
+                    <!--Pyydä omat tiedot popup-->
+                    <div id="pyydatiedot" class="pyydatiedot">
+                        <div class="popup-content">
+                            <h3>Olet lähettämässä pyynnön saadaksesi henkilötietosi</h3>
+                            <p>Tiedot lähetetään sähköpostiisi</p>
+                            <input class="kirjaudu"type="text" placeholder="sähköposti"><br>
+                            <a id="pyydatiedotinfo" class="lisatieto">Lisätietoa tietojen pyytämisestä</a><br>
+                            <button id="vahvistapyynto" class="close">Vahvista</button><br>
+                            <button id="peruutapyynto" class="close">Peruuta</button> 
+                        </div>
+                    </div>
+                    
+                    <!--Annetaan käyttäjälle vahvistus tietopynnön lähettämisestä-->
+                    <div id="vahvistapyyntopopup" class="vahvistapyyntopopup">
                       <div class="popup-content">
-                          <p>Tietojen poistopyyntö lähetetty.</p>
-                          <button id="sulje" class="close">Sulje</button>
+                          <p>Pyyntö henkilötietojesi lähettämiseksi on lähetetty</p>
+                          <button id="suljevahvistapyynto" class="close">Sulje</button>
                       </div>
+                    </div>
+                    
+                    <!--Lisätietoja tietojen lähettämisestä popup-->
+                    <div id="lahetatiedotinfo" class="lahetatiedotinfo">
+                        <div class="popup-content">
+                            <p>Jos rekisteröidyn tietoja käsitellään, rekisterinpitäjän on toimitettava hänelle jäljennös käsiteltävistä henkilötiedoista. Jos rekisteröity esittää pyynnön sähköisesti, tiedot on toimitettava yleisesti käytetyssä sähköisessä muodossa, paitsi jos rekisteröity toisin pyytää.<br><br>
+
+                            Lisäksi rekisteröidyllä on oikeus saada seuraavat tiedot:<br><br>
+
+                            - käsittelyn tarkoitukset<br>
+                            - käsiteltävät henkilötietoryhmät<br>
+                            - vastaanottajat tai vastaanottajaryhmät, erityisesti kolmansissa 
+                               maissa olevat vastaanottajat tai kansainväliset järjestöt, joille 
+                               henkilötietoja on luovutettu tai on tarkoitus luovuttaa<br>
+                            - suojatoimet, jos henkilötietoja siirretään kolmanteen maahan tai 
+                               kansainväliselle järjestölle<br>
+                            - henkilötietojen suunniteltu säilytysaika tai jos se ei ole mahdollista, 
+                               säilytysajan määrittämiskriteerit<br>
+                            - rekisteröidyn oikeus pyytää rekisterinpitäjältä häntä itseään - 
+                               koskevien henkilötietojen oikaisemista tai poistamista tai 
+                               henkilötietojen käsittelyn rajoittamista sekä oikeus vastustaa 
+                               tällaista käsittelyä<br>
+                            - oikeus tehdä valitus valvontaviranomaiselle<br>
+                            - jos henkilötietoja ei kerätä rekisteröidyltä, kaikki tietojen 
+                               alkuperästä käytettävissä olevat tiedot<br>
+                            - automaattisen päätöksenteon (ml. profilointi) mahdollinen käyttö, 
+                              merkitykselliset tiedot käsittelyyn liittyvästä logiikasta, kyseisen 
+                              käsittelyn merkittävyys ja mahdolliset seuraukset rekisteröidylle.</p> 
+                            <button id="suljelahetatiedotinfo" class="close">Sulje</button>
+                        </div>
+                    </div>
+                    
+                    <!--Tietojen oikaisupyyntö-->
+                    <div id="oikaisupyynto" class="oikaisupyynto">
+                        <div class="popup-content">
+                            <h3>Olet lähettämässä oikaisupyynnön tiedoistasi</h3>
+                            <a id="avaaoikaisuinfo" class="lisatieto">Lisätietoa tietojen oikaisupyynnöstä</a>
+                            <textarea id="oikaisuteksti" class="muokkaus" rows="6" placeholder="Kirjoita tähän oikaisupyyntöäsi koskevat asiat"></textarea>
+                            <button id="vahvistaoikaisu" class="close">Vahvista</button><br>
+                            <button id="peruutaoikaisu" class="close">Peruuta</button> 
+                        </div>
+                    </div>
+                    
+                    <!--Annetaan käyttäjälle vahvistus oikaisupyynnön lähettämisestä-->
+                    <div id="vahvistaoikaisupopup" class="vahvistaoikaiuspopup">
+                      <div class="popup-content">
+                          <p>Tietojen oikaisupyyntö lähetetty</p>
+                          <button id="suljevahvistaoikaisu" class="close">Sulje</button>
+                      </div>
+                    </div>
+                    
+                    <!--Lisätietoja tietojen oikaisusta-->
+                    <div id="oikaisuinfo" class="oikaisuinfo">
+                        <div class="popup-content">
+                            <p>Rekisteröidyllä on oikeus vaatia, että rekisterinpitäjä oikaisee häntä koskevat epätarkat ja virheelliset henkilötiedot. Rekisteröidyllä on myös oikeus saada puutteelliset henkilötiedot täydennettyä.<br><br>
+
+                            Rekisterinpitäjän täytyy vastata rekisteröidylle ilman aiheetonta viivytystä, joka tapauksessa kuukauden kuluessa pyynnön vastaanottamisesta. Vastauksessa rekisterinpitäjä kertoo toimenpiteistä, joihin se on pyynnön vuoksi ryhtynyt.<br><br>
+
+                            Jos pyyntöjä on monta tai ne ovat monimutkaisia, rekisterinpitäjä voi ilmoittaa vastauksessaan, että se tarvitsee niiden käsittelyyn enemmän aikaa. Tällöin määräaikaa voidaan jatkaa enintään kahdella kuukaudella. Määräajan jatkaminen on perusteltava.<br><br>
+
+                            Jos rekisterinpitäjä kieltäytyy rekisteröidyn pyynnöstä, sen on ilmoitettava siitä rekisteröidylle viimeistään kuukauden kuluessa pyynnön vastaanottamisesta. Kieltäytyminen on perusteltava. Rekisterinpitäjän on myös kerrottava rekisteröidylle mahdollisuudesta tehdä valitus valvontaviranomaiselle sekä käyttää muita oikeussuojakeinoja.<br><br>
+
+                            Jos rekisteröidyn oikaisupyynnöt ovat ilmeisen perusteettomia tai kohtuuttomia, rekisterinpitäjä voi joko periä kohtuullisen maksun tai kieltäytyä pyynnöstä.</p>
+                            <button id="suljeoikaisuinfo" class="close">Sulje</button>
+                        </div>
                     </div>
                     
                 </div>
@@ -163,12 +264,16 @@
                 var osoite = document.getElementById("osoite").value;
                 var postnum = document.getElementById("postnum").value;
                 var postitmp = document.getElementById("postitmp").value;
+                var kutsumanimi = document.getElementById("kutsumanimi").value;
+                var kieli = document.getElementById("kieli").value;
                 
                 document.getElementById("puh").innerText = puh;
                 document.getElementById("email").innerText = email;
                 document.getElementById("osoite").innerText = osoite;
                 document.getElementById("postnum").innerText = postnum;
                 document.getElementById("postitmp").innerText = postitmp;
+                document.getElementById("kutsumanimi").innerText = kutsumanimi;
+                document.getElementById("kieli").innerText = kieli;
                 
             }
             /*Tietojen poistppyyntöön liittyvät popupit*/
@@ -208,6 +313,83 @@
                 poistolisatietopopup.style.display = "none";
                 delpopup.style.display = "inline-block";
             }
+            
+            /*Tietojen pyyntöön liittyvät popupit*/
+            var pyydatiedot = document.getElementById("pyydatiedot");
+            var avaapyydatiedot = document.getElementById("avaapyydatiedot");
+            var peruutapyynto = document.getElementById("peruutapyynto");
+            var vahvistapyynto = document.getElementById("vahvistapyynto");
+            var pyydatiedotinfo = document.getElementById("pyydatiedotinfo");
+            var vahvistapyyntopopup = document.getElementById("vahvistapyyntopopup");
+            var suljevahvistapyynto = document.getElementById("suljevahvistapyynto");
+            var lahetatiedotinfo = document.getElementById("lahetatiedotinfo");
+            var suljelahetatiedotinfo = document.getElementById("suljelahetatiedotinfo");
+            
+            avaapyydatiedot.onclick = function() {
+                pyydatiedot.style.display = "inline-block";
+            }
+            
+            peruutapyynto.onclick = function() {
+                pyydatiedot.style.display = "none";
+            }
+            
+            vahvistapyynto.onclick = function() {
+                pyydatiedot.style.display = "none";
+                vahvistapyyntopopup.style.display = "inline-block";
+            }
+            
+            suljevahvistapyynto.onclick = function() {
+                vahvistapyyntopopup.style.display = "none";
+            }
+            
+            pyydatiedotinfo.onclick = function() {
+                pyydatiedot.style.display = "none";
+                lahetatiedotinfo.style.display = "inline-block";
+            }
+            
+            suljelahetatiedotinfo.onclick = function() {
+                lahetatiedotinfo.style.display = "none";
+                pyydatiedot.style.display = "inline-block";
+            }
+            
+            /*Tietojen oikaisupyyntöön liittyvät popupit*/
+            var avaaoikaisu = document.getElementById("avaaoikaisu");
+            var oikaisupyynto = document.getElementById("oikaisupyynto");
+            var avaaoikaisuinfo = document.getElementById("avaaoikaisuinfo");
+            var peruutaoikaisu = document.getElementById("peruutaoikaisu");
+            var vahvistaoikaisu = document.getElementById("vahvistaoikaisu");
+            var vahvistaoikaisupopup = document.getElementById("vahvistaoikaisupopup");
+            var suljevahvistaoikaisu = document.getElementById("suljevahvistaoikaisu");
+            var oikaisuinfo = document.getElementById("oikaisuinfo");
+            var suljeoikaisuinfo = document.getElementById("suljeoikaisuinfo");
+            
+            avaaoikaisu.onclick = function() {
+                oikaisupyynto.style.display = "inline-block";
+            }
+            
+            peruutaoikaisu.onclick = function() {
+                oikaisupyynto.style.display = "none";
+            }
+            
+            vahvistaoikaisu.onclick = function() {
+                oikaisupyynto.style.display = "none";
+                vahvistaoikaisupopup.style.display = "inline-block";
+            }
+            
+            suljevahvistaoikaisu.onclick = function() {
+                vahvistaoikaisupopup.style.display = "none";
+            }
+            
+            avaaoikaisuinfo.onclick = function() {
+                oikaisupyynto.style.display = "none";
+                oikaisuinfo.style.display = "inline-block";
+            }
+            
+            suljeoikaisuinfo.onclick = function() {
+                oikaisuinfo.style.display = "none";
+                oikaisupyynto.style.display = "inline-block";
+            }
+            
             
         </script>
     </body>

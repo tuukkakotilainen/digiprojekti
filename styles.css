@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /*Header*/
 .header {
     overflow: hidden;
@@ -170,6 +174,7 @@
 
 .unohditko {
     color: #5f5f5f;
+    cursor: pointer;
 }
 
 /*Etusivu*/
@@ -209,6 +214,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     background-color: #f2f2f2;
+    outline: none;
 }
 
 .muokkaus {
@@ -242,7 +248,7 @@
     text-decoration: underline;
 }
 
-/*Tietojen poistopopup*/
+/*Tietosuojapopupit*/
 
 .delpopup {
     display: none;
@@ -268,6 +274,50 @@
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+}
+
+.pyydatiedot {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.vahvistapyyntopopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.lahetatiedotinfo {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.lahetatiedotinfo p {
+    font-size: 16px;
+    text-align: left;
 }
 
 .popup-content {
@@ -301,6 +351,50 @@
 }
 
 .poistolisatietopopup p {
+    font-size: 16px;
+    text-align: left;
+}
+
+.oikaisupyynto {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.vahvistaoikaiuspopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.oikaisuinfo{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.oikaisuinfo p {
     font-size: 16px;
     text-align: left;
 }
@@ -339,7 +433,7 @@
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: lightgray;
     text-decoration: none;
     cursor: pointer;
 }
