@@ -1,66 +1,71 @@
+
+
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
 }
 
 /*Header*/
 .header {
-    overflow: hidden;
-    background-color: #414042;
-    padding: 20px 10px;
+  overflow: hidden;
+  background-color: #414042;
+  padding: 10px 10px;
 }
 
 .logo {
-    float: left;
+  float: left;
 }
 
 .header-right {
-    float: right;
+  float: right;
+  padding-right: 20px;
 }
 
 .kieli {
-    color: white;
-    text-decoration: none;
-    margin: 18px 10px;
-    border: none;
-    outline: none;
-    background-color: inherit;
-    font-family: inherit;
-    font-size: 16px;
-    cursor: pointer;
+  color: white;
+  text-decoration: none;
+  margin: 18px 10px;
+  padding-right: 10px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .viiva {
-    color: red;
+  color: red;
 }
 
 .dropdown {
-    float: left;
-    overflow: hidden;
+  float: left;
+  overflow: hidden;
 }
 
 .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 10px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 10px 10px;
-    border-radius: 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 10px 10px;
+  border-radius: 20px;
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #ED1C24;
+  background-color: #ed1c24;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -78,362 +83,479 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .arrow {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 4px;
-    transform: rotate(45deg);
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
 }
 
 .tuki {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .logout {
-    background-color: #ED1C24;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display:inline-block;
-    font-size: 16px;
-    margin: 10px 10px;
-    cursor: pointer;
-    border-radius: 20px;
+  background-color: #ed1c24;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
 /*Login*/
 
 .login {
-    text-align: center; 
-    background-color: #DCF4EF;
-    max-width: 400px;
-    margin: auto;
-    margin-top: 50px;
-    border-radius: 20px;
-    padding: 50px;
+  text-align: center;
+  background-color: #dcf4ef;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  padding: 50px;
 }
 
 .kirjaudu {
-    width: 300px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .painike {
-    background-color: #414042;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    margin: 10px 50px;
-    cursor: pointer;
-    border-radius: 20px;
-    width: 200px;
-    outline: none;
+  background-color: #414042;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 50px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 200px;
+  outline: none;
 }
 
 .loginerror {
-    display: none;
-    color:red;
-    font-weight: bold;
+  display: none;
+  color: red;
+  font-weight: bold;
 }
 
 .kortinluku {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .unohditko {
-    color: #5f5f5f;
-    cursor: pointer;
+  color: #5f5f5f;
+  cursor: pointer;
 }
 
 /*Etusivu*/
 
 .tausta {
-    background-color: #DCF4EF;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 50px;
-    border-radius: 20px;
+  background-color: #dcf4ef;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
 }
 
 .wrapper {
-    margin: auto;
-    max-width: 75rem;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    
+  margin: auto;
+  max-width: 75rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .flex_container {
-    display: flex;
+  display: flex;
 }
 
 .flex_item {
-    flex:1; 
-    margin-left: 110px;
+  flex: 1;
+  margin-left: 110px;
 }
 
 .luku {
-    width: 70%;
-    max-width: 500px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: #f2f2f2;
-    outline: none;
+  width: 70%;
+  max-width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  outline: none;
+  margin-top: 3px;
 }
 
 .muokkaus {
-    width: 70%;
-    max-width: 500px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
+  width: 70%;
+  max-width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+label {
+  letter-spacing: 0.1px;
+}
+
+.flex_container.wrapper h2 {
+  letter-spacing: 0.8px;
 }
 
 .submit {
-    background-color: #414042;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display:inline-block;
-    font-size: 16px;
-    margin: 10px 50px;
-    cursor: pointer;
-    border-radius: 20px;
+  background-color: #414042;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 50px;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
 .tietosuoja {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a.tietosuoja:hover {
+  color: #b9595d;
+}
+
+/* @ MEDIA */
+@media (max-width: 1100px) {
+  /* lomake-sivu */
+  .tausta {
+    width: 100%;
+    max-width: 95vw;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 817px) {
+  /* lomake-sivu */
+  .flex_container.wrapper {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .flex-item {
+    margin: auto;
+  }
+
+  #flex_item1 {
+    margin-bottom: 50px;
+  }
+
+  #tietosuoja-blokki {
+    margin-top: 40px;
+  }
+
+  .tausta {
+    width: 100%;
+    max-width: 95vw;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  /* lomake-sivu */
+  .flex_item h2 {
+    display: block;
+  }
+
+  .flex_item {
+    margin: 3vw;
+    padding-left: 5vw;
+  }
+
+  .flex_container.wrapper {
+    padding-top: 0.5vw;
+  }
+
+  /* Login-sivu */
+  .login-boksi {
+    margin: 3vw;
+  }
+  .login {
+    width: 100%;
+    max-width: 250vw;
+    padding: 0px;
+    margin: auto;
+  }
+
+  .kirjaudu {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    box-sizing: unset;
+  }
+
+  .painike {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .unohditko {
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
+
+  .header-right {
+    padding-right: 0px;
+  }
+
+  .kieli {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* lomake-sivu */
+  .submit#submit {
+    padding: 10px;
+    margin-left: 5vw;
+  }
 }
 
 /*Tietosuojapopupit*/
 
 .delpopup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .vahvistapopup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .pyydatiedot {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .vahvistapyyntopopup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .lahetatiedotinfo {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .lahetatiedotinfo p {
-    font-size: 16px;
-    text-align: left;
+  font-size: 16px;
+  text-align: left;
 }
 
 .popup-content {
-    background-color: #DCF4EF;
-    margin: 15% auto;
-    padding: 100px 20px;
-    border: 1px solid #888;
-    border-radius: 20px;
-    max-width: 30rem;
-    font-size: 30px;
-    text-align: center;
+  background-color: #dcf4ef;
+  margin: 15% auto;
+  padding: 100px 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  max-width: 30rem;
+  font-size: 30px;
+  text-align: center;
 }
 
 .lisatieto {
-    font-size: 16px;
-    text-decoration: underline;
-    cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .poistolisatietopopup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .poistolisatietopopup p {
-    font-size: 16px;
-    text-align: left;
+  font-size: 16px;
+  text-align: left;
 }
 
 .oikaisupyynto {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .vahvistaoikaiuspopup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.oikaisuinfo{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+.oikaisuinfo {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .oikaisuinfo p {
-    font-size: 16px;
-    text-align: left;
+  font-size: 16px;
+  text-align: left;
 }
 
 .close {
-    background-color: #414042;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-    display:inline-block;
-    font-size: 16px;
-    margin: 10px 10px;
-    cursor: pointer;
-    border-radius: 20px;
+  background-color: #414042;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
 .vahvista {
-    background-color: #ED1C24;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-    display:inline-block;
-    font-size: 16px;
-    margin: 10px 10px;
-    cursor: pointer;
-    border-radius: 20px;
+  background-color: #ed1c24;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
 .close:hover,
 .close:focus {
-    color: lightgray;
-    text-decoration: none;
-    cursor: pointer;
+  color: lightgray;
+  text-decoration: none;
+  cursor: pointer;
 }

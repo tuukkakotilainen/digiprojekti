@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fi">
     <head>
@@ -6,12 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
         
         <!--Header-->
         <div class="header">
-            <img src="csit.png" alt="logo" class="logo">
+            <img src="kuvat/csit.png" alt="logo" class="logo">
             <div class="header-right">
                 <a class="viiva">|</a>
                 <button class="kieli">SWE</button>
@@ -47,58 +51,59 @@
             <div class="flex_container wrapper">
                 
                 <!--Henkilötiedot-->
-                <div class="flex_item">
+                <div class="flex_item" id="flex_item1">
                     <h2>Henkilötiedot</h2>
                         <label for="kayttajanimi">Käyttäjänimi</label><br>
-                        <input class="luku" type="text" id="kayttajanimi" name="kayttajanimi" value="123" readonly><br>
+                        <input class="luku" type="text" id="kayttajanimi" name="kayttajanimi" value="" readonly><br>
                         <label for="nimi">Etunimet</label><br>
-                        <input class="luku" type="text" id="etunimi" name="etunimi" value="Erkki Ernest" readonly><br>
+                        <input class="luku" type="text" id="etunimi" name="etunimi" value="" readonly><br>
                         <label for="nimi">Sukunimi</label><br>
-                        <input class="luku" type="text" id="sukunimi" name="sukunimi" value="Esimerkki" readonly><br>
+                        <input class="luku" type="text" id="sukunimi" name="sukunimi" value="" readonly><br>
                         <label for="henkilotunnut">Henkilötunnus</label><br>
-                        <input class="luku" type="text" id="henkilotunnut" name="henkilotunnut" value="111111-111X" readonly><br>
+                        <input class="luku" type="text" id="henkilotunnus" name="henkilotunnus" value="" readonly><br>
                         <label for="kutsumanimi">Kutsumanimi</label><br>
-                        <input class="muokkaus" type="text" id="kutsumanimi" name="kutsumanimi" value="Badding"><br>
+                        <input class="muokkaus" type="text" id="kutsumanimi" name="kutsumanimi" value=""><br>
                         <label for="puh">Puh.</label><br>
-                        <input class="muokkaus" type="text" id="puh" name="puh" value="045 1234 567"><br>
+                        <input class="muokkaus" type="text" id="puh" name="puh" value=""><br>
                         <label for="email">Sähköposti</label><br>
-                        <input class="muokkaus" type="text" id="email" name="email" value="erkki.esimerkki@gmail.com"><br>
+                        <input class="muokkaus" type="text" id="email" name="email" value=""><br>
                         <label for="osoite">Katuosoite</label><br>
-                        <input class="muokkaus" type="text" id="osoite" name="osoite" value="Kukkakuja 3"><br>
+                        <input class="muokkaus" type="text" id="osoite" name="osoite" value=""><br>
                         <label for="postnum">Postinumero</label><br>
-                        <input class="muokkaus" type="text" id="postnum" name="postnum" value="00100"><br>
+                        <input class="muokkaus" type="text" id="postnum" name="postnum" value=""><br>
                         <label for="postitmp">Postitoimipaikka</label><br>
-                        <input class="muokkaus" type="text" id="postitmp" name="postitmp" value="Helsinki"><br>
+                        <input class="muokkaus" type="text" id="postitmp" name="postitmp" value=""><br>
                         <label for="kieli">Kieli</label><br>
-                        <input class="muokkaus" type="text" id="kieli" name="kieli" value="Suomi"><br>
+                        <input class="muokkaus" type="text" id="kieli" name="kieli" value=""><br>
                     
-                        <button class="submit" id="submit">Tallenna muutokset</button>
+                        <button class="submit" id="submit" onclick="paivita()">Tallenna muutokset</button> <!--lisätty onclick -->
                 </div>
                 
                 <!--Työsuhteen tiedot-->
-                <div class="flex_item">
-                    <h2>Työsuhteen teidot</h2>
+                <div class="flex_item" id="flex_item2">
+                    <h2>Työsuhteen tiedot</h2>
                         <label for="henkilokuntanumero">Henkilökuntanumero</label><br>
-                        <input class="luku" type="text" id="henkilokuntanumero" name="henkilokuntanumero" value="123456789" readonly><br>
+                        <input class="luku" type="text" id="henkilokuntanumero" name="henkilokuntanumero" value="" readonly><br>
                         <label for="nimike">Ammattinimike</label><br>
-                        <input class="luku" type="text" id="nimike" name="nimike" value="Lääkäri" readonly><br>
-                        <label for="Tyonkuvaus">Työnkuvaus</label><br>
-                        <input class="luku" type="text" id="tyonkuvaus" name="tyonkuvaus" value="Kirurgi" readonly><br>
+                        <input class="luku" type="text" id="nimike" name="nimike" value="" readonly><br>
+                        <label for="tyonkuvaus">Työnkuvaus</label><br>
+                        <input class="luku" type="text" id="tyonkuvaus" name="tyonkuvaus" value="" readonly><br>
                         <label for="osasto">Osasto</label><br>
-                        <input class="luku" type="text" id="osasto" name="osasto" value="15B" readonly><br>
+                        <input class="luku" type="text" id="osasto" name="osasto" value="" readonly><br>
                         <label for="alkupvm">Työsuhteen alkamispäivä</label><br>
-                        <input class="luku" type="text" id="alkupvm" name="alkupvm" value="01/11/2009" readonly><br>
+                        <input class="luku" type="text" id="alkupvm" name="alkupvm" value="" readonly><br>
                         <label for="tyosuhde">Työsuhde</label><br>
-                        <input class="luku" type="text" id="tyosuhde" name="tyosuhde" value="Vakituinen" readonly><br>
+                        <input class="luku" type="text" id="tyosuhde" name="tyosuhde" value="" readonly><br>
                         <label for="esimies">Esimies</label><br>
-                        <input class="luku" type="text" id="esimies" name="esimies" value="Paula Pomo" readonly><br>
-                    
-                        <h2>Tietosuoja</h2>
-                    
-                        <a id="delbtn" class="tietosuoja">- Lähetä tietojen poistopyyntö</a> <br><br>
-                        <a id="avaapyydatiedot" class="tietosuoja">- Pyydä omat tiedot</a> <br><br>
-                        <a id="avaaoikaisu" class="tietosuoja">- Pyydä tietojen oikaisua</a> <br><br>
-                        <a class="tietosuoja">- Vaihda salasana</a>
+                        <input class="luku" type="text" id="esimies" name="esimies" value="" readonly><br>
+
+                        <div id="tietosuoja-blokki">
+                            <h2>Tietosuoja</h2>
+                            <a id="delbtn" class="tietosuoja">Lähetä tietojen poistopyyntö</a> <br><br>
+                            <a id="avaapyydatiedot" class="tietosuoja">Pyydä omat tiedot</a> <br><br>
+                            <a id="avaaoikaisu" class="tietosuoja">Pyydä tietojen oikaisua</a> <br><br>
+                            <a class="tietosuoja">Vaihda salasana</a>
+                        </div>
                     
                     <!--Popup jossa pyydetään varmistus tietojen poistopyynnön lähettämiseen-->
                     <div id="delpopup" class="delpopup">
@@ -254,28 +259,7 @@
             suljetuki.onclick = function() {
                 tuki.style.display = "none";
             }
-            
-            /*Tietojen "tallentaminen"*/
-            var submit = document.getElementById("submit");
-            
-            submit.onClick = function tallenna() {
-                var puh = document.getElementById("puh").value;
-                var email = document.getElementById("email").value;
-                var osoite = document.getElementById("osoite").value;
-                var postnum = document.getElementById("postnum").value;
-                var postitmp = document.getElementById("postitmp").value;
-                var kutsumanimi = document.getElementById("kutsumanimi").value;
-                var kieli = document.getElementById("kieli").value;
-                
-                document.getElementById("puh").innerText = puh;
-                document.getElementById("email").innerText = email;
-                document.getElementById("osoite").innerText = osoite;
-                document.getElementById("postnum").innerText = postnum;
-                document.getElementById("postitmp").innerText = postitmp;
-                document.getElementById("kutsumanimi").innerText = kutsumanimi;
-                document.getElementById("kieli").innerText = kieli;
-                
-            }
+
             /*Tietojen poistppyyntöön liittyvät popupit*/
             var delpopup = document.getElementById("delpopup");
             var btn = document.getElementById("delbtn");
@@ -391,6 +375,137 @@
             }
             
             
+        </script>
+        <!-- FIREBASE -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyDrxNaNv6MJI1PDakeJLqIV3mbH0X3HVDo",
+                authDomain: "digiprojekti-cddb4.firebaseapp.com",
+                projectId: "digiprojekti-cddb4",
+                storageBucket: "digiprojekti-cddb4.appspot.com",
+                messagingSenderId: "1020315308453",
+                appId: "1:1020315308453:web:8cdd70f5392bbf974bd84c",
+                measurementId: "G-9FNT1L3SF3"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            // ----------- Tämä tuo tiedot firebasesta inputteihin ---------------
+
+            // tiedon lisääminen
+            var db = firebase.firestore();
+
+            db.collection("henkilotiedot")
+                .get()
+                .then(function (querySnapshot) {
+                    querySnapshot.forEach(function (doc) {
+                        // doc.data() is never undefined for query doc snapshots
+                        console.log(doc.id, " => ", doc.data());
+
+                        // haetaan tietokannasta tiedot muuttujiin
+                        // Henkilötiedot
+                        var kayttajanimiDB = doc.data().kayttajanimi
+                        var etunimetDB = doc.data().etunimet
+                        var sukunimiDB = doc.data().sukunimi
+                        var henkilotunnusDB = doc.data().henkilotunnus
+                        var kutsumanimiDB = doc.data().kutsumanimi
+                        var puhelinDB = doc.data().puhelin
+                        var sahkopostiDB = doc.data().sahkoposti
+                        var katuosoiteDB = doc.data().katuosoite
+                        var postinumeroDB = doc.data().postinumero
+                        var postitoimipaikkaDB = doc.data().postitoimipaikka
+                        var kieliDB = doc.data().kieli
+                        // Työsuhteen tiedot
+                        var henkilokuntanumeroDB = doc.data().henkilokuntanumero
+                        var ammattinimikeDB = doc.data().ammattinimike
+                        var tyonkuvausDB = doc.data().tyonkuvaus
+                        var osastoDB = doc.data().osasto
+                        var tyosuhdealkoiDB = doc.data().tyosuhdealkoi
+                        var tyosuhdeDB = doc.data().tyosuhde
+                        var esimiesDB = doc.data().esimies
+
+                        // lisätään muuttujat inputteihin
+                        // Henkilötiedot
+                        var kayttajanimi = document.getElementById("kayttajanimi").value = kayttajanimiDB;
+                        var etunimet = document.getElementById("etunimi").value = etunimetDB;
+                        var sukunimi = document.getElementById("sukunimi").value = sukunimiDB;
+                        var henkilotunnus = document.getElementById("henkilotunnus").value = henkilotunnusDB;
+                        var kutsumanimi = document.getElementById("kutsumanimi").value = kutsumanimiDB;
+                        var puhelin = document.getElementById("puh").value = puhelinDB;
+                        var sahkoposti = document.getElementById("email").value = sahkopostiDB;
+                        var katuosoite = document.getElementById("osoite").value = katuosoiteDB;
+                        var postinumero = document.getElementById("postnum").value = postinumeroDB;
+                        var postitoimipaikka = document.getElementById("postitmp").value = postitoimipaikkaDB;
+                        var kieli = document.getElementById("kieli").value = kieliDB;
+                        // Työsuhteen tiedot
+                        var henkilokuntanumero = document.getElementById("henkilokuntanumero").value = henkilokuntanumeroDB;
+                        var ammattinimike = document.getElementById("nimike").value = ammattinimikeDB;
+                        var tyonkuvaus = document.getElementById("tyonkuvaus").value = tyonkuvausDB;
+                        var osasto = document.getElementById("osasto").value = osastoDB;
+                        var tyosuhdealkoi = document.getElementById("alkupvm").value = tyosuhdealkoiDB;
+                        var tyosuhde = document.getElementById("tyosuhde").value = tyosuhdeDB;
+                        var esimies = document.getElementById("esimies").value = esimiesDB;
+                        // lisääminen sivulle
+                        $("#kayttajanimi").append(kayttajanimi);
+                        $("#etunimi").append(etunimet);
+                        $("#sukunimi").append(sukunimi);
+                        $("#kutsumanimi").append(kutsumanimi);
+                        $("#puh").append(puhelin);
+                        $("#email").append(sahkoposti);
+                        $("#osoite").append(katuosoite);
+                        $("#postnum").append(postinumero);
+                        $("#postitmp").append(postitoimipaikka);
+                        $("#kieli").append(kieli);
+
+                        $("#henkilokuntanumero").append(henkilokuntanumero);
+                        $("#nimike").append(ammattinimike);
+                        $("#tyonkuvaus").append(tyonkuvaus);
+                        $("#osasto").append(osasto);
+                        $("#alkupvm").append(tyosuhdealkoi);
+                        $("#tyosuhde").append(tyosuhde);
+                        $("#esimies").append(esimies);
+                    });
+                })
+                .catch(function (error) {
+                    console.log("Error getting documents: ", error);
+                });
+            ;
+
+            // ------ paivita() funktio päivittää tiedot inputeista firebaseen ----------
+            function paivita() {
+                // haetaan inputeissa olevat tiedot muuttujiin
+                var kutsumanimi = document.getElementById("kutsumanimi").value;
+                var puhelin = document.getElementById("puh").value;
+                var sahkoposti = document.getElementById("email").value;
+                var katuosoite = document.getElementById("osoite").value;
+                var postinumero = document.getElementById("postnum").value;
+                var postitoimipaikka = document.getElementById("postitmp").value;
+                var kieli = document.getElementById("kieli").value;
+
+                // Päivitetään muuttujilla tiedot tietokantaan
+                db.collection("henkilotiedot").doc("henkilo").update({
+                    "kutsumanimi": kutsumanimi,
+                    "puhelin": puhelin,
+                    "sahkoposti": sahkoposti,
+                    "katuosoite": katuosoite,
+                    "postinumero": postinumero,
+                    "postitoimipaikka": postitoimipaikka,
+                    "kieli": kieli
+                })
+                    .then(function () {
+                        console.log("Document successfully updated!");
+                    });
+            }
+
         </script>
     </body>
 </html>
