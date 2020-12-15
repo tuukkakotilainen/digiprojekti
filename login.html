@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fi">
     <head>
@@ -11,7 +12,7 @@
     <body>
         <!--Header-->
         <div class="header">
-            <img src="csit.png" alt="logo" class="logo">
+            <img src="kuvat/csit.png" alt="logo" class="logo">
             <div class="header-right">
                 <a class="viiva">|</a>
                 <button class="kieli">SWE</button>
@@ -40,29 +41,32 @@
         </div>
         
         <!--login-->
-        <div class="login">
-            <img src="csitbig.png" alt="logo">
-            <h1>Kirjaudu sisään</h1>
-            <p id="loginerror" class="loginerror">Käyttäjätunnus tai salasana on väärin.</p>
-            
-            <form name="login">
-                <div>
-                    <input class="kirjaudu"type="text" placeholder="käyttäjätunnus" name="userid"><br>
-                    <input class="kirjaudu" type="password" placeholder="salasana" name="password"><br>
-                    <input class ="painike" type="button" onClick="check(this.form)" value="Kirjaudu"/><br>
-                    <input class ="painike" type="button" onClick="kortti()" value="Lue kortti">
-                </div>
-            </form>
-            <p class="unohditko">Unohditko salasanasi?</p>
-            
-            <div id="kortinluku" class="kortinluku">
-                <div class="popup-content">
-                    <p>Syötä kortti lukijaan kirjautuaksesi.</p> <br>
-                    <button id="peruuta" class="close">Peruuta</button>
+        <!--<div class="flex-container"> -->
+            <div class="login-boksi">
+            <div class="login">
+                <img src="kuvat/csitbig.png" alt="logo">
+                <h1>Kirjaudu sisään</h1>
+                <p id="loginerror" class="loginerror">Käyttäjätunnus tai salasana on väärin.</p>
+                
+                <form name="login">
+                    <div>
+                        <input class="kirjaudu"type="text" placeholder="käyttäjätunnus" name="userid"><br>
+                        <input class="kirjaudu" type="password" placeholder="salasana" name="password"><br>
+                        <input class ="painike" type="button" onClick="check(this.form)" value="Kirjaudu"/><br>
+                        <input class ="painike" type="button" onClick="kortti()" value="Lue kortti">
+                    </div>
+                </form>
+                <p class="unohditko">Unohditko salasanasi?</p>
+                
+                <div id="kortinluku" class="kortinluku">
+                    <div class="popup-content">
+                        <p>Syötä kortti lukijaan kirjautuaksesi.</p> <br>
+                        <button id="peruuta" class="close">Peruuta</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        
+            </div>
+
         <script>
             /*Tukipopup*/
             var tuki = document.getElementById("tuki");
